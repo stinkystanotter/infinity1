@@ -4,7 +4,14 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use sqlite3 as the database for Active Record
+group :development do
+  gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -30,6 +37,10 @@ gem 'jbuilder', '~> 1.2'
 # Does this just work?
 gem 'nokogiri'
 gem 'xml-simple'
+
+# use per: https://devcenter.heroku.com/articles/getting-started-with-rails4#heroku-gems
+gem 'rails_12factor', group: :production
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
