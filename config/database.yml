@@ -21,6 +21,6 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: girlfriends-beta_production
+  database: infinity_production
   pool: 5
   timeout: 5000
