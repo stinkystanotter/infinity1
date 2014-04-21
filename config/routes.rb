@@ -2,9 +2,14 @@ Positions::Application.routes.draw do
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  get '/welcome/make_a_guy', to: 'welcome#make_a_guy'
+  get '/welcome/create' => 'welcome#create'
+  post '/welcome/create' => 'welcome#created'
   # You can have the root of your site routed with "root"
   root 'welcome#index'
+  
+  #resources :players
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

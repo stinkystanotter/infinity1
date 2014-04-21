@@ -38,4 +38,15 @@ class WelcomeController < ApplicationController
     @data2 = XmlSimple.xml_in(@file2, { 'KeyAttr' => 'id' })
     #@base = base
   end
+  
+  def make_a_guy
+    @guy = Player.new
+  end
+  
+  def created
+    @guys = Player.all
+  end
+  
+  
+  
 end

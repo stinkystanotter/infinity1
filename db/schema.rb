@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140410070119) do
+ActiveRecord::Schema.define(version: 20140421045306) do
 
   create_table "players", force: true do |t|
     t.string   "name"
@@ -21,6 +21,10 @@ ActiveRecord::Schema.define(version: 20140410070119) do
     t.string   "inf_pos"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "is_vd_2k13_starter"
+    t.boolean  "is_otter_2k13_starter"
+    t.boolean  "is_vd_2k13_bench"
+    t.boolean  "is_otter_2k13_bench"
   end
 
 end

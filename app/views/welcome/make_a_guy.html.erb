@@ -1,0 +1,15 @@
+<h1>All you need is IDs</h1>
+<br>
+<%= form_for @guy, url: { action: "create" } do |f| %>
+  <%= f.label "Name:"   %>
+  <%= f.text_field :name, :autofocus => true, :tabindex => 1 %><br />
+  <%= f.label "Pos:" %>
+  <%= f.text_field :inf_pos %><br />
+  <%= f.label "Team" %>
+  <%= f.text_field :mlb_team %><br />
+  <%= f.label "SD Player ID" %>
+  <%= f.text_field :sd_id %><br />
+  <%= f.label "SD Team ID (1)" %>
+  <%= f.text_field :sd_team_id %><br />
+  <%= f.submit "Create" %>
+<% end %>
