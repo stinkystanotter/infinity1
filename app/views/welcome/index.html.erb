@@ -5,15 +5,23 @@
 <hr>
 <%= @data2['player']['000f4266-baa3-4065-b8c7-acd16e9dbe72']['team']['f246a5e5-afdb-479c-9aaa-c68beeda7af6']['hitting'][0]['ab'] %>-->
 <hr>
+<table border='0'>
+  <thead>
+    <tr>
+      <th>Vass</th><th>Otter</th>
+    </tr>
+  </thead>
+<td>
   <table border='1'>
     <thead>
       <tr>
         <th>Name</th><th>Position</th><th>Team</th><th>G</th><th>AB</th><th>H</th><th>BA</th><th>R</th><th>HR</th><th>RBI</th><th>SB</th>
       </tr>
     </thead>  
-<% @players.each do |p| %>
+<% @players_vd_13.each do |p| %>
 <tr>
-<td><%= p.name %></td><td><%= p.inf_pos %></td><td><%= p.mlb_team %></td><td><%= @data2['player']["#{p.sd_id}"]['team']["#{p.sd_team_id}"]['hitting'][0]['games'][0]['play'] %></td>
+<td><%= p.name %></td><td><%= p.inf_pos %></td><td><%= p.mlb_team %></td>
+<td><%= @data2['player']["#{p.sd_id}"]['team']["#{p.sd_team_id}"]['hitting'][0]['games'][0]['play'] %></td>
 <td><%= @data2['player']["#{p.sd_id}"]['team']["#{p.sd_team_id}"]['hitting'][0]['ab' ] %></td>
 <td><%= @data2['player']["#{p.sd_id}"]['team']["#{p.sd_team_id}"]['hitting'][0]['onbase'][0]['h'] %></td>
 <td><%= @data2['player']["#{p.sd_id}"]['team']["#{p.sd_team_id}"]['hitting'][0]['avg' ] %></td>
@@ -24,3 +32,28 @@
 </tr>
 <% end %>
   </table>
+</td>  
+<td>
+  <table border='1'>
+    <thead>
+      <tr>
+        <th>Name</th><th>Position</th><th>Team</th><th>G</th><th>AB</th><th>H</th><th>BA</th><th>R</th><th>HR</th><th>RBI</th><th>SB</th>
+      </tr>
+    </thead>  
+<% @players_otter_13.each do |p| %>
+<tr>
+<td><%= p.name %></td><td><%= p.inf_pos %></td><td><%= p.mlb_team %></td>
+<td><%= @data2['player']["#{p.sd_id}"]['team']["#{p.sd_team_id}"]['hitting'][0]['games'][0]['play'] %></td>
+<td><%= @data2['player']["#{p.sd_id}"]['team']["#{p.sd_team_id}"]['hitting'][0]['ab' ] %></td>
+<td><%= @data2['player']["#{p.sd_id}"]['team']["#{p.sd_team_id}"]['hitting'][0]['onbase'][0]['h'] %></td>
+<td><%= @data2['player']["#{p.sd_id}"]['team']["#{p.sd_team_id}"]['hitting'][0]['avg' ] %></td>
+<td><%= @data2['player']["#{p.sd_id}"]['team']["#{p.sd_team_id}"]['hitting'][0]['runs'][0]['total'] %></td>
+<td><%= @data2['player']["#{p.sd_id}"]['team']["#{p.sd_team_id}"]['hitting'][0]['onbase'][0]['hr'] %></td>
+<td><%= @data2['player']["#{p.sd_id}"]['team']["#{p.sd_team_id}"]['hitting'][0]['rbi'] %></td>
+<td><%= @data2['player']["#{p.sd_id}"]['team']["#{p.sd_team_id}"]['hitting'][0]['steal'][0]['stolen'] %></td>
+</tr>
+<% end %>
+  </table>  
+  
+</td>
+</table>  

@@ -28,8 +28,8 @@ class WelcomeController < ApplicationController
   
   def index
     @players = Player.all
-        
-    
+    @players_vd_13 = Player.where(is_vd_2k13_starter: true)    
+    @players_otter_13 = Player.where(is_otter_2k13_starter: true)
     #@uri1 = uri1
     @uri2 = my_uri("player seasonal stats")
     #@file = open(uri1)
